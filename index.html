@@ -9,115 +9,134 @@
     <title>Nguyen Van Cuong</title>
 </head>
 <body>
-    <div class="header">
-        <h1 class="header_name">Nguyen Van Cuong</h1>
-        <h4 class="header_position">Backend Developer</h4>
-        <div class="header_contact">
-            <a href="tel:+84865235802" class="header_contact-link">
-                <span class="header_icon-contact material-symbols-outlined">call</span>
-                <p class="header_contact-view">+84865235802</p>
-            </a>
-            <a href="mailto:cuong.fithau@gmail.com" class="header_contact-link">
-                <span class="header_icon-contact material-symbols-outlined">email</span>
-                <p class="header_contact-view">Cuong.fithau@gmail.com</p>
-            </a>
-            <a href="https://github.com/cuonvc" class="header_contact-link">
-                <span class="header_icon-contact material-symbols-outlined">code</span>
-                <p class="header_contact-view">Github</p>
-            </a>
-<!--             <a href="#" class="header_contact-link">
-                <span class="header_icon-contact material-symbols-outlined">Link</span>
-                <p class="header_contact-view">LinkedIn</p>
-            </a> -->
-            <a href="https://goo.gl/maps/Gk1TCL7eRTZii1mK7" class="header_contact-link">
-                <span class="header_icon-contact material-symbols-outlined">home</span>
-                <p class="header_contact-view">Hoang Mai, Hanoi</p>
-            </a>
-        </div>
-    </div>
-    <div class="body">
-        <div class="row">
-            <div class="col" style="flex-basis: 72%; padding-right: 40px;">
-                <div class="body_item">
-                    <h2 class="body_item-title">Summary</h2>
-                    <ul>
-                        <li>I have been searching and learning about Java core in my first year of college and approaching Spring Framework, HTML, CSS, and Javascript in my second year to present.</li>
-                        <li>My main knowledge is Java backend and related technologies but I can research and learn by myself new technology if it is necessary.</li>
-                    </ul>
-                </div>
-                <div class="body_item">
-                    <h2 class="body_item-title">Education</h2>
-                    <h5>Hanoi Architectural University</h5>
-                    <ul>
-                        <li>I 'm third years infomation technology student</li>
-                        <li>I reached maximum score - 4.0 in Programming Fundamentals course</li>
-                    </ul>
-                </div>
-                <div class="body_item">
-                    <h2 class="body_item-title">Work history</h2>
-                    <h5>Personal project</h5>
-                    <ul>
-                        <li>I built a website about writing social networks. We could sign in to write a blog with available categories and comment below every post. If you don't have a login account, you can register with an email and username.</li>
-                        <li>You may also edit your personal homepage, which other users can visit, and update private information.</li>
-                        <li>I have created an admin page to manage users, posts, and categories,... It is accessible by admin accounts.</li>
-                    </ul>
-                    <h5>Hyperlogy - Smart vending machine</h5>
-                    <ul>
-                        <li>The <a style="color: #000;" href="https://www.smartvendingmachines.net/">Smart Vending Machine</a> is a product with many intelligent technology features such as a POS machine to pay VISA, Master, JCB, and Napas cards, management via phone app, and data analysis,...</li>
-                        <li>I joined as a backend internship developer and was assigned many tasks on internal modules in microservice systems and APIs.</li>
-                        <li>In the process of working with the team, I approached and worked with many techniques such as Kafka, Redis, microservice systems, and WebSocket protocol with the Spring Framework.</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col" style="flex-basis: 28%;">
-                <div class="body_item">
-                    <h2 class="body_item-title">Tech skill</h2>
-                    <h5>Base Tech skill</h5>
-                    <ul>
-                        <li>Java, Spring boot</li>
-                        <li>JPA, Hibernate</li>
-                        <li>MySQL</li>
-                        <li>HTML, CSS, Javascript</li>
-                    </ul>
-                    <h5>Approached techniques</h5>
-                    <ul>
-                        <li>Kafka</li>
-                        <li>Redis</li>
-                        <li>Microservice</li>
-                        <li>WebSocket</li>
-                    </ul>
-                </div>
-                <div class="body_item">
-                    <h2 class="body_item-title">Projects</h2>
-                    <h5>Toiviet.app</h5>
-                    <ul>
-                        <li>
-                            <span style="font-weight: 600">Architecture:</span>
-                            <p>RESTful API</p>
-                        </li>
-                        <li>
-                            <span style="font-weight: 600">Frontend: <a style="font-size: 12px; color: #636363;" href="https://github.com/cuonvc/Blog-app-frontend">(Source)</a></span>
-                            <p>HTML, CSS, Javascript</p>
-                        </li>
-                        <li>
-                            <span style="font-weight: 600">Backend: <a style="font-size: 12px; color: #636363;" href="https://github.com/cuonvc/rest-blog">(Source)</a></span>
-                            <p>Java, Spring boot, JPA, Hibernate</p>
-                        </li>
-                        <li>
-                            <span style="font-weight: 600">Security:</span>
-                            <p>Spring security, JWT</p>
-                        </li>
-                        <li>
-                            <span style="font-weight: 600">Feature:</span>
-                            <p>Sign up for an account, log in, create (edit, delete) posts and comments, customize user profiles, modify private information, and manage the system by admin account.</p>
-                        </li>
-                    </ul>
-                </div>
+    <input type="button" value="Download as PDF" id="btnPrint"/>
+    <div id="body_view">
+        <div class="header">
+            <h1 class="header_name">Nguyen Van Cuong</h1>
+            <h4 class="header_position">Backend Developer</h4>
+            <div class="header_contact">
+                <a href="tel:+84865235802" class="header_contact-link">
+                    <span class="header_icon-contact material-symbols-outlined">call</span>
+                    <p class="header_contact-view">+84865235802</p>
+                </a>
+                <a href="mailto:cuong.fithau@gmail.com" class="header_contact-link">
+                    <span class="header_icon-contact material-symbols-outlined">email</span>
+                    <p class="header_contact-view">Cuong.fithau@gmail.com</p>
+                </a>
+                <a href="https://github.com/cuonvc" class="header_contact-link">
+                    <span class="header_icon-contact material-symbols-outlined">code</span>
+                    <p class="header_contact-view">Github</p>
+                </a>
+    <!--             <a href="#" class="header_contact-link">
+                    <span class="header_icon-contact material-symbols-outlined">Link</span>
+                    <p class="header_contact-view">LinkedIn</p>
+                </a> -->
+                <a href="https://goo.gl/maps/Gk1TCL7eRTZii1mK7" class="header_contact-link">
+                    <span class="header_icon-contact material-symbols-outlined">home</span>
+                    <p class="header_contact-view">Hoang Mai, Hanoi</p>
+                </a>
             </div>
         </div>
-    </div>
-    <div class="footer">
+        <div class="body">
+            <div class="row">
+                <div class="col" style="flex-basis: 72%; padding-right: 40px;">
+                    <div class="body_item">
+                        <h2 class="body_item-title">Summary</h2>
+                        <ul>
+                            <li>I have been searching and learning about Java core in my first year of college and approaching Spring Framework, HTML, CSS, and Javascript in my second year to present.</li>
+                            <li>My main knowledge is Java backend and related technologies but I can research and learn by myself new technology if it is necessary.</li>
+                        </ul>
+                    </div>
+                    <div class="body_item">
+                        <h2 class="body_item-title">Education</h2>
+                        <h5>Hanoi Architectural University</h5>
+                        <ul>
+                            <li>I 'm third years infomation technology student</li>
+                            <li>I reached maximum score - 4.0 in Programming Fundamentals course</li>
+                        </ul>
+                    </div>
+                    <div class="body_item">
+                        <h2 class="body_item-title">Work history</h2>
+                        <h5>Personal project</h5>
+                        <ul>
+                            <li>I built a website about writing social networks. We could sign in to write a blog with available categories and comment below every post. If you don't have a login account, you can register with an email and username.</li>
+                            <li>You may also edit your personal homepage, which other users can visit, and update private information.</li>
+                            <li>I have created an admin page to manage users, posts, and categories,... It is accessible by admin accounts.</li>
+                        </ul>
+                        <h5>Hyperlogy - Smart vending machine</h5>
+                        <ul>
+                            <li>The <a style="color: #000;" href="https://www.smartvendingmachines.net/">Smart Vending Machine</a> is a product with many intelligent technology features such as a POS machine to pay VISA, Master, JCB, and Napas cards, management via phone app, and data analysis,...</li>
+                            <li>I joined as a backend internship developer and was assigned many tasks on internal modules in microservice systems and APIs.</li>
+                            <li>In the process of working with the team, I approached and worked with many techniques such as Kafka, Redis, microservice systems, and WebSocket protocol with the Spring Framework.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col" style="flex-basis: 28%;">
+                    <div class="body_item">
+                        <h2 class="body_item-title">Tech skill</h2>
+                        <h5>Base Tech skill</h5>
+                        <ul>
+                            <li>Java, Spring boot</li>
+                            <li>JPA, Hibernate</li>
+                            <li>MySQL</li>
+                            <li>HTML, CSS, Javascript</li>
+                        </ul>
+                        <h5>Approached techniques</h5>
+                        <ul>
+                            <li>Kafka</li>
+                            <li>Redis</li>
+                            <li>Microservice</li>
+                            <li>WebSocket</li>
+                        </ul>
+                    </div>
+                    <div class="body_item">
+                        <h2 class="body_item-title">Projects</h2>
+                        <h5>Toiviet.app</h5>
+                        <ul>
+                            <li>
+                                <span style="font-weight: 600">Architecture:</span>
+                                <p>RESTful API</p>
+                            </li>
+                            <li>
+                                <span style="font-weight: 600">Frontend: <a style="font-size: 12px; color: #636363;" href="https://github.com/cuonvc/Blog-app-frontend">(Source)</a></span>
+                                <p>HTML, CSS, Javascript</p>
+                            </li>
+                            <li>
+                                <span style="font-weight: 600">Backend: <a style="font-size: 12px; color: #636363;" href="https://github.com/cuonvc/rest-blog">(Source)</a></span>
+                                <p>Java, Spring boot, JPA, Hibernate</p>
+                            </li>
+                            <li>
+                                <span style="font-weight: 600">Security:</span>
+                                <p>Spring security, JWT</p>
+                            </li>
+                            <li>
+                                <span style="font-weight: 600">Feature:</span>
+                                <p>Sign up for an account, log in, create (edit, delete) posts and comments, customize user profiles, modify private information, and manage the system by admin account.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
 
+        </div>
     </div>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript">
+    document.getElementById('btnPrint').addEventListener("click", function() {
+        var element = document.getElementById("body_view");
+
+        var opt = {
+            margin: 1,
+            filename: 'myfile.pdf',
+            image: {type: 'jpeg', quality: 0.98},
+            html2canvas: {scale: 2},
+            jsPDF: {unit: 'in', format: 'letter', orientation: 'portrait'}
+        };
+
+        html2pdf(element, opt);
+    });
+</script>
 </html>
