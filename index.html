@@ -5,14 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <link rel="stylesheet" href="./style.css">
-    <title>Nguyen Van Cuong</title>
+    <title>Nguyen Van Cuong</title>  
 </head>
 <body>
-    <input type="button" value="Download as PDF" id="btnPrint"/>
+    <input style="float: right" type="button" value="Download as PDF" id="btnPrint"/>
     <div id="body_view">
         <div class="header">
-            <h1 class="header_name">Nguyen Van Cuong</h1>
+            <h1 id="btnPrint" class="header_name">Nguyen Van Cuong</h1>
             <h4 class="header_position">Backend Developer</h4>
             <div class="header_contact">
                 <a href="tel:+84865235802" class="header_contact-link">
@@ -27,7 +26,7 @@
                     <span class="header_icon-contact material-symbols-outlined">code</span>
                     <p class="header_contact-view">Github</p>
                 </a>
-    <!--             <a href="#" class="header_contact-link">
+                <!-- <a href="#" class="header_contact-link">
                     <span class="header_icon-contact material-symbols-outlined">Link</span>
                     <p class="header_contact-view">LinkedIn</p>
                 </a> -->
@@ -74,14 +73,14 @@
                 <div class="col" style="flex-basis: 28%;">
                     <div class="body_item">
                         <h2 class="body_item-title">Tech skill</h2>
-                        <h5>Base Tech skill</h5>
+                        <h5>Basic skills</h5>
                         <ul>
                             <li>Java, Spring boot</li>
                             <li>JPA, Hibernate</li>
                             <li>MySQL</li>
                             <li>HTML, CSS, Javascript</li>
                         </ul>
-                        <h5>Approached techniques</h5>
+                        <h5>Recently approached</h5>
                         <ul>
                             <li>Kafka</li>
                             <li>Redis</li>
@@ -119,21 +118,111 @@
             </div>
         </div>
         <div class="footer">
+    </div>
+    
 
-        </div>
     </div>
 </body>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        font-family: 'Be Vietnam Pro', sans-serif;
+    }
+
+    .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48
+    }
+
+    body {
+        height: 297mm;
+        width: 210mm;
+        border: 1px solid #9999994b;
+        margin: 30px auto;
+        padding: 2cm;
+    }
+
+    .header_position {
+        color: #b49566;
+        padding: 10px 0;
+    }
+
+    .header_contact {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .header_contact-link {
+        color: #636363;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        padding-right: 70px;
+        padding-top: 10px;
+    }
+
+    .header_contact-link:hover {
+        color: #000;
+    }
+
+    .header_contact-link > span {
+        font-size: 18px;
+    }
+
+    .header_contact-link > p {
+        text-decoration: underline;
+        font-size: 12px;
+        padding-left: 6px;
+        font-weight: 600;
+    }
+
+    .row {
+        display: flex;
+    }
+
+    .body_item {
+        margin-top: 24px;
+    }
+
+    .body_item-title {
+        border-bottom: 2px solid #000;
+    }
+
+    .body_item > h5 {
+        font-weight: 600;
+        font-size: 14px;
+        padding-top: 10px;
+        color: #b49566;
+    }
+
+    .body_item > ul > li {
+        font-size: 14px;
+        line-height: 1.4;
+        /* list-style: inside; */
+        list-style: none;
+        padding-top: 8px;
+    }
+</style>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script type="text/javascript">
     document.getElementById('btnPrint').addEventListener("click", function() {
-        var element = document.getElementById("body_view");
+        var element = document.querySelector("#body_view");
 
         var opt = {
-            margin: 1,
+            margin: 2,
             filename: 'myfile.pdf',
-            image: {type: 'jpeg', quality: 0.98},
+            image: {type: 'jpeg', quality: 1},
             html2canvas: {scale: 2},
-            jsPDF: {unit: 'in', format: 'letter', orientation: 'portrait'}
+            jsPDF: {unit: 'cm', format: 'a4', orientation: 'portrait'}
         };
 
         html2pdf(element, opt);
